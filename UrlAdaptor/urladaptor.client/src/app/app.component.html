@@ -1,0 +1,8 @@
+<ejs-grid #grid [dataSource]='data' [toolbar]="toolbar" [editSettings]="editSettings" allowSorting="true" allowPaging="true" allowFiltering="true">
+  <e-columns>
+    <e-column field='OrderID' headerText='Order ID' width='120' textAlign='Right' isPrimaryKey="true"></e-column>
+    <e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
+    <e-column field='Freight' headerText='Freight' width='150' format="C2" editType="numericedit" ></e-column>
+    <e-column field='ShippedDate' headerText='Shipped Date' width='150' format="yMd" editType="datepickeredit"></e-column>
+  </e-columns>
+</ejs-grid>
