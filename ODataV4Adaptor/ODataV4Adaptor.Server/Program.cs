@@ -8,10 +8,14 @@ var builder = WebApplication.CreateBuilder(args);
 var modelBuilder = new ODataConventionModelBuilder();
 modelBuilder.EntitySet<OrdersDetails>("Orders");
 
+var recordCount = OrdersDetails.GetAllRecords().Count;
+
 builder.Services.AddControllers().AddOData(
     options => options
     .Count()
-    .SetMaxTop(null)
+    .OrderBy()
+    .Filter()
+    .SetMaxTop(recordCount)
     .AddRouteComponents(
         "odata",
         modelBuilder.GetEdmModel()));

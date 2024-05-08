@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EditService, GridModule, PageService, ToolbarService } from '@syncfusion/ej2-angular-grids';
+import { EditService, FilterService, GridModule, PageService, SortService, ToolbarService } from '@syncfusion/ej2-angular-grids';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { EditService, GridModule, PageService, ToolbarService } from '@syncfusio
     AppRoutingModule,
     GridModule
   ],
-  providers: [EditService, ToolbarService, PageService],
+  providers: [EditService, ToolbarService, PageService, SortService, FilterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
